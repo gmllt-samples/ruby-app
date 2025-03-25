@@ -1,0 +1,11 @@
+---
+applications:
+- name: gmllt-ruby-app
+  buildpacks:
+  - ruby_buildpack_v1_10_22
+  command: ruby ./bin/start_server.rb
+  metadata:
+    labels:
+      entity: OF.DTSI.PFC.SC.SOR.SLUG
+    annotations:
+      com.orange.repository.orangecarto/id: '31641'
