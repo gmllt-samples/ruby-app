@@ -28,7 +28,7 @@ jobs:
 
       - name: Create source zip
         run: |
-          echo "web: ruby app.rb" > Procfile
+          echo "web: ruby bin/start_server.rb" > Procfile
           zip -r "${{ env.SOURCE_ZIP_NAME }}" $(find . -type f -name "*.rb" ! -path "./.git/*") Gemfile Gemfile.lock Procfile
 
       - name: Create GitHub Release
